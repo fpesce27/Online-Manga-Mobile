@@ -1,4 +1,6 @@
 export interface Manga {
+    current_chapter: number | undefined;
+    manga?: any;
     mal_id:          number;
     url:             string;
     images:          { [key: string]: Image };
@@ -70,4 +72,14 @@ export interface From {
 export interface Title {
     type:  string;
     title: string;
+}
+
+export interface Chapter {
+    title: string;
+    number: number;
+}
+
+export interface MangaRow{
+    highestRated: Manga[];
+    mostPopular: Manga[];
 }
